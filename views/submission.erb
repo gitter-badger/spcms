@@ -1,0 +1,19 @@
+<% @title = "Submission" %>
+<form action="/submit" method="post">
+  <div>
+    <div>
+      <label>Problem ID</label>
+      <input type="number" name="problem_id" value="1" min="1">
+    </div>
+    <div>
+      <label>Set</label>
+      <input type="radio" name="set" value="small" checked="checked">Small
+      <input type="radio" name="set" value="large">Large
+    </div>
+  </div>
+  <div>
+    <label>Output</label>
+    <textarea name="output" rows="10" cols="40"></textarea>
+  </div>
+  <p>Note: Make sure that your output has new line at the end.</p>
+</form>
