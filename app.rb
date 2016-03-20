@@ -15,6 +15,9 @@ post '/submit' do
   case params[:action]
   when "download"
     send_file(problem.input_path, filename: "#{problem.id}-#{problem.set}.in")
+  when "submit"
+    sub = Submission.new(problem, params[:output])
+    sub.judge
   else
     status 400
     "Bad request"

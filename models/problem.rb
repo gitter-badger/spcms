@@ -10,6 +10,10 @@ class Problem
     "#{path}.in"
   end
 
+  def correct_output
+    File.read("#{path}.out")
+  end
+
   private
   def path
     "problems/#{@id}/#{@set.to_s}"
